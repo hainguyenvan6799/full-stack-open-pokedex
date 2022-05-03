@@ -24,6 +24,8 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
+    - name: Value of Github Token
+      run: echo ${{ secrets.GITHUB_TOKEN }}
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.36.0
       env:
